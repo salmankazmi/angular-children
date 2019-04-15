@@ -9,7 +9,9 @@ export class Hero {
   selector: 'my-app',
   template:
     `
-  <app-hero-component #myHeroes *ngFor="let hero of heroes" [hero]="hero"></app-hero-component>
+  <!-- <app-hero-component #myHeroes *ngFor="let hero of heroes" [hero]="hero"></app-hero-component> -->
+
+  <my-comp></my-comp>
   
   `,
   styleUrls: ['./app.component.css']
@@ -22,7 +24,7 @@ export class AppComponent implements AfterViewInit{
   constructor() {}
 
   ngAfterViewInit() {
-    console.log(this.myHeroes);
+   // console.log(this.myHeroes);
   }
 
   heroes: Array<Hero> = [
